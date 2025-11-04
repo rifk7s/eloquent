@@ -7,7 +7,11 @@
 <div>
     <div class="blur-fade mb-8">
         @include('partials.custom_back_button', ['href' => route('projects.index'), 'title' => $project->title])
-        <p class="text-secondary">{{ $project->type }}</p>
+        <div class="flex items-center gap-3 text-secondary">
+            <span>{{ $project->type }}</span>
+            <span>•</span>
+            <span>By {{ $project->user->name }}</span>
+        </div>
     </div>
 
     <article class="blur-fade blur-fade-delay-1">

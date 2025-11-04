@@ -28,7 +28,11 @@
                             <h3 class="text-lg font-bold mb-2 group-hover:text-blue-400 transition-colors">
                                 {{ $project->title }}
                             </h3>
-                            <p class="text-sm text-muted mb-3">{{ $project->type }}</p>
+                            <div class="flex items-center gap-2 text-xs text-muted-foreground mb-3">
+                                <span>{{ $project->type }}</span>
+                                <span>•</span>
+                                <span>By {{ $project->user->name }}</span>
+                            </div>
                             <p class="text-sm text-muted-foreground mb-4 line-clamp-2">{{ $project->description }}</p>
                             
                             <div class="flex flex-wrap gap-2">

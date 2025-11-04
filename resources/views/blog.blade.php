@@ -16,7 +16,11 @@
             <article class="blur-fade blur-fade-delay-{{ $index + 1 }} card card-hover rounded-lg p-4">
                 <a href="{{ route('blog.show', $post->slug) }}" class="block group">
                     <h3 class="font-medium mb-1 group-hover:text-blue-400 transition-colors">{{ $post->title }}</h3>
-                    <p class="text-sm text-muted-foreground mb-2">{{ $post->published_at->format('F j, Y') }}</p>
+                    <div class="flex items-center gap-3 text-sm text-muted-foreground mb-2">
+                        <span>{{ $post->published_at->format('F j, Y') }}</span>
+                        <span>•</span>
+                        <span>By {{ $post->user->name }}</span>
+                    </div>
                     @if($post->excerpt)
                         <p class="text-sm text-muted">{{ $post->excerpt }}</p>
                     @endif
