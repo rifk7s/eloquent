@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -42,6 +43,7 @@ class ProjectFactory extends Factory
         ];
 
         return [
+            'user_id' => User::factory(),
             'title' => ucwords($title),
             'slug' => \Illuminate\Support\Str::slug($title),
             'type' => fake()->randomElement($projectTypes),
