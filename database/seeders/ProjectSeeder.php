@@ -60,7 +60,7 @@ class ProjectSeeder extends Seeder
         Project::factory()->count(8)->create([
             'user_id' => $user->id,
             'is_featured' => false,
-            'order' => fn() => rand(3, 100),
+            'order' => fn () => rand(3, 100),
         ]);
     }
 }

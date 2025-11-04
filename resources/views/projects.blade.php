@@ -20,8 +20,7 @@
                             <div class="h-48 bg-gray-800 overflow-hidden">
                                 <img src="{{ $project->image }}"
                                      alt="{{ $project->title }}"
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                     onerror="this.src='https://via.placeholder.com/400x300?text={{ urlencode($project->title) }}'">
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             </div>
                         @endif
                         <div class="p-6">

@@ -50,8 +50,8 @@ class ProjectFactory extends Factory
             'description' => fake()->paragraphs(3, true),
             'image' => '/project-images/Placeholder_Image.svg',
             'languages' => fake()->randomElement($techStacks),
-            'github_url' => fake()->boolean(80) ? 'https://github.com/rifk7s/' . \Illuminate\Support\Str::slug($title) : null,
-            'live_url' => fake()->boolean(60) ? 'https://' . \Illuminate\Support\Str::slug($title) . '.vercel.app' : null,
+            'github_url' => fake()->boolean(80) ? 'https://github.com/rifk7s/'.\Illuminate\Support\Str::slug($title) : null,
+            'live_url' => fake()->boolean(60) ? 'https://'.\Illuminate\Support\Str::slug($title).'.vercel.app' : null,
             'is_featured' => fake()->boolean(30),
             'order' => fake()->numberBetween(0, 100),
         ];

@@ -19,8 +19,7 @@
             <div class="rounded-lg overflow-hidden mb-8 bg-gray-800">
                 <img src="{{ $project->image }}"
                      alt="{{ $project->title }}"
-                     class="w-full h-auto object-cover"
-                     onerror="this.src='https://via.placeholder.com/800x400?text={{ urlencode($project->title) }}'">
+                     class="w-full h-auto object-cover">
             </div>
         @endif
 
