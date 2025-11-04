@@ -12,7 +12,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::ordered()->get();
+        $projects = Project::with('user')->ordered()->get();
 
         return view('projects', compact('projects'));
     }
@@ -22,7 +22,7 @@ class ProjectController extends Controller
      */
     public function show($slug)
     {
-        $project = Project::where('slug', $slug)->firstOrFail();
+        $project = Project::with('user')->where('slug', $slug)->firstOrFail();
 
         return view('project-detail', compact('project'));
     }
